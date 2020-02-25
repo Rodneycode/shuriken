@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Shuriken</title>
+  <!-- META -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- TITLE -->
+<title>Shuriken</title><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+  Shuriken | Game Store and Launcher
+-->
+
+<!-- Menu -->
+<header>
+  <div id="plus"></div>
+  <div id="info"></div>
+  <div id="notifications"></div>
+  <div id="user"></div>
+  <div id="username">Usuário</div>
+  <div id="clock">--:-- AM</div>
+</header>
+
+<!-- Menu -->
+<div id="xmb-menu">
+
+  <!-- Store menu item -->
+  <div class="menu-item" 
+       context-menu="
+                     Shuriken => #
+                     ----
+                     Desenvolvido por: => #
+                     FelipeNadhel => #
+                     ;-; Küelhø ;-; => #
+                     Himaru => #
+                     Random_Furry => #
+                     Pirate Bay => #
+                     ----
+                     Discord: => #
+                     Shuriken Discord => https://discord.gg/2a8fq5e
+                     ----
+                     2020 - Shuriken Store => #
+                     "
+       >
+    <div class="item-img ps-store"></div>
+    <div class="item-subtitle ascii">▼</div>
+    <span class="item-title">Games</span>
+
+    <!-- Store items -->
+    <div class="rss">
+      <div class="item-title">Nenhum destaque ainda :(</div>
+    </div>
+  </div>
+
+  <!-- Other menu items -->
+  <div class="menu-item">
+    <div class="item-img new"></div>
+    <div class="item-subtitle ascii">▼</div>
+    <span class="item-title">O que há de novo?</span>
+
+    <!-- What's New -->
+    <div class="rss">
+      <div id="nothing"      class="sub-item"></div>
+    </div>
+  </div>
+
+  <!-- Survivor -->
+  <div id="game-survivor" class="menu-item"
+       context-menu="
+                     Iniciar Survivor => D:/loja da shuriken/blush-ps4-ui/blush-ps4-ui/games/survivor-beta-9.html
+                     ----
+                     Download => https://drive.google.com/file/d/1B12DHRi8FwGDZQFbhv5MxQVY11qsVLK6/view
+                     Log de Atualização => #
+                     Deletar => javascript:$('#game-survivor').css({display: 'none'}); offcontextmenu();
+                     Informações => #
+                     "
+       >
+    <div class="item-img survivor"></div>
+    <div class="item-subtitle">Start</div>
+    <span class="item-title">Survivor</span>
+  </div>
+
+  <!-- Into The DIMENSIONS -->
+  <div id="game-itd" class="menu-item"
+       context-menu="
+                     Iniciar Into The DIMENSIONS => D:/loja da shuriken/blush-ps4-ui/blush-ps4-ui/games/into-the-dimensions.html
+                     ----
+                     Download => https://drive.google.com/open?id=1Ia5c0mQDDVlcVHkUOGUSWQV1l_ISZTy7
+                     Log de Atualização => #
+                     Deletar => javascript:$('#game-itd').css({display: 'none'}); offcontextmenu();
+                     Informações => #
+                     "
+       >
+    <div class="item-img into-the-dimensions"></div>
+    <div class="item-subtitle">Start</div>
+    <span class="item-title">Into The DIMENSIONS</span>
+  </div>
+
+  <!-- Pixel BATTLE ARENA -->
+  <div id="game-pixel-battle-arena" class="menu-item"
+       context-menu="
+                     Iniciar Pixel BATTLE ARENA => D:/loja da shuriken/blush-ps4-ui/blush-ps4-ui/games/pixel-battle-arena.html
+                     ----
+                     Download => https://drive.google.com/open?id=1ghmnM3bh4nYtHBTx5R_4IjAjUxQ0eH1M
+                     Log de Atualização => #
+                     Deletar => javascript:$('#game-pixel-battle-arena').css({display: 'none'}); offcontextmenu();
+                     Informações => #
+                     "
+       >
+    <div class="item-img pixel-battle-arena"></div>
+    <div class="item-subtitle">Start</div>
+    <span class="item-title">Pixel BATTLE ARENA</span>
+  </div>
+
+</div>
+
+<!-- Context menu -->
+<div id="context-menu"></div>
+
+<!-- Loading animation container -->
+<div class="loading-container display">
+  <div class="loading-icon"><img/></div>
+  <div class="loading-icon"><img/></div>
+  <div class="loading-icon"><img/></div>
+  <div class="loading-icon"><img/></div>
+  <img class="logo" src="images/header-big.png"/>
+</div>
+
+<!-- Background -->
+<div id="wave-container">
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
