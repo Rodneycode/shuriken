@@ -19,6 +19,7 @@ We all do this because digital game sites and stores are very complicated to use
 - Download bar incorporated in the page
 - If game exists, show on library
 - Achievments
+- Artwork Tab
 
 ## Installation
 
