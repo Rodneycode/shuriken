@@ -7,6 +7,9 @@
 
 var notifications = [
   "Nova Aba exclusiva para Artworks"
+  "Pássaro, por FelipeNadhel, em Artworks"
+  "Erro, por FelipeNadhel, em Artworks"
+  "Código, por FelipeNadhel, em Artworks"
 ];
 
 $(document).ready(function() {
@@ -99,8 +102,8 @@ function initialise() {
     var date = new Date(),
         hrs  = date.getHours(),
         mins = date.getMinutes();
-    
-        $('#clock').text(
+
+    $('#clock').text(
       (" " + (hrs < 13? hrs || 12: hrs - 12)).slice(-2) + ":" + ("0" + mins).slice(-2) + " " + (hrs < 12? "AM": "PM")
     );
   }, 1000);
