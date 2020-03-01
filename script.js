@@ -6,7 +6,10 @@
  */
 
 var notifications = [
-  "Nada importante ainda!"
+  "Nova Aba exclusiva para Artworks"
+  "Pássaro, por FelipeNadhel, em Artworks"
+  "Erro, por FelipeNadhel, em Artworks"
+  "Código, por FelipeNadhel, em Artworks"
 ];
 
 $(document).ready(function() {
