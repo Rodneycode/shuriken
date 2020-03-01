@@ -99,6 +99,11 @@ function initialise() {
     var date = new Date(),
         hrs  = date.getHours(),
         mins = date.getMinutes();
+    
+        $('#clock').text(
+      (" " + (hrs < 13? hrs || 12: hrs - 12)).slice(-2) + ":" + ("0" + mins).slice(-2) + " " + (hrs < 12? "AM": "PM")
+    );
+  }, 1000);
 
   notify();
 }
