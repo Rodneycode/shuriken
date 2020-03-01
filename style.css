@@ -396,6 +396,11 @@ header div {
   background-size:     90%;
 }
 
+.artwork {
+  background-image: url("https://shuriken-store.github.io/shuriken/images/artwork-B.png");
+  background-size:     90%;
+}
+
 .sub-item {
   background-position: center;
   background-repeat:   no-repeat;
