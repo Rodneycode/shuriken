@@ -468,6 +468,7 @@ header div {
 
 #itd {
   background-image: url("D:/loja da shuriken/blush-ps4-ui/blush-ps4-ui/games/storage/itd-thumb.png");
+  background-size: 110%;
 }
 
 #nothing {
@@ -481,6 +482,7 @@ header div {
 
 #pba {
   background-image: url("D:/loja da shuriken/blush-ps4-ui/blush-ps4-ui/games/storage/pba.png");
+  background-size: 110%;
 }
 
 /* ICONS */
