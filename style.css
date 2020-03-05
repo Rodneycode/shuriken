@@ -485,6 +485,20 @@ header div {
   background-size: 110%;
 }
 
+#itd-store {
+  background-image: url("D:/loja da shuriken/blush-ps4-ui/blush-ps4-ui/games/storage/itd-thumb.png");
+  background-size: 110%;
+}
+
+#survivor-store {
+  background-image: url("D:/loja da shuriken/blush-ps4-ui/blush-ps4-ui/games/storage/Webp.net-resizeimage.png");
+}
+
+#pba-store {
+  background-image: url("D:/loja da shuriken/blush-ps4-ui/blush-ps4-ui/games/storage/pba.png");
+  background-size: 110%;
+}
+
 /* ICONS */
 
 .triangle {
