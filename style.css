@@ -122,6 +122,18 @@ src: url("/fonts/I-pixel-u.ttf");
   width: 3em;
 }
 
+#close {
+  background-image:    url("https://shuriken-store.github.io/images/exit.png");
+  background-position: center;
+  background-repeat:   no-repeat;
+  background-size:     contain;
+
+  float:       left;
+  margin-left: 1em;
+
+  width: 3em;
+}
+
 #clock {
   color:       #FFF;
   font-family: Arial;
