@@ -17,8 +17,8 @@ We all do this because digital game sites and stores are very complicated to use
 ### To do stuff
 
 - Download bar incorporated in the page
-- If game exists, show on library
-- Achievments
+- If game exists, show on library (Ok!)
+- Achievments (Doing)
 - Artwork Tab (Ok!)
 
 ## Installation
