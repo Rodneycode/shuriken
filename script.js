@@ -6,7 +6,9 @@
  */
 
 var notifications = [
-  "Nova Aba exclusiva para Artworks"
+  "Atualização, cheque a Workshop",
+  "Descubra, clicando com o botão direito você pode ver a opções de um game",
+  "Atualização do game Survivor"
 ];
 
 $(document).ready(function() {
