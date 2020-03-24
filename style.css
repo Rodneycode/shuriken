@@ -517,6 +517,11 @@ header div {
   background-size: 70%;
 }
 
+#controls {
+  background-image: url("https://shuriken-store.github.io/shuriken/images/controls.png");
+  background-size: 70%;
+}
+
 #download {
   background-image: url("https://shuriken-store.github.io/shuriken/images/download.png");
   background-size: 70%;
