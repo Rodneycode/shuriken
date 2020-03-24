@@ -112,6 +112,18 @@
     </div>
   </div>
   
+  <!-- Workshop -->
+  <div class="menu-item">
+    <div class="item-img workshop"></div>
+    <div class="item-subtitle ascii">▼</div>
+    <span class="item-title">Oficina</span>
+
+    <!-- Items -->
+    <div class="rss">
+      <span class="item-title">Nenhum item disponível</span>
+    </div>
+  </div>
+  
   <!-- Library (BETA) -->
   <div id="library" class="menu-item"
        context-menu="
@@ -172,9 +184,8 @@
                      Usuário => #
                      ----
                      Mudar nome (Temporário) => javascript: window.prompt("Novo nome de usuário","Ex: Irineu");
-                     ----
                      Compartilhamento de Conta: => #
-                     Esconder loja (Temporário) => #
+                     Esconder loja (Temporário) => javascript:$('#ps-store').css({display: 'none'}); offcontextmenu();
                      "
            ></div>
       <div id="controls"      class="sub-item"
@@ -194,7 +205,7 @@
        ></div>
     </div>
   </div>
-
+  
 </div>
 
 <!-- Context menu -->
