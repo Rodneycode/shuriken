@@ -449,6 +449,7 @@ header div {
 
 .chat {
   background-image: url("https://shuriken-store.github.io/shuriken/images/chat-B.png");
+  background-size:     90%
 }
 
 .survivor {
