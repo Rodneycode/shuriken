@@ -462,17 +462,6 @@ header div {
 
 #newusers {
   background-image: url("https://shuriken-store.github.io/shuriken/images/users.png")
-  background-size:  70%
-}
-
-#newstuff {
-  background-image: url("https://shuriken-store.github.io/shuriken/images/chat-B.png");
-  background-size:  70%
-}
-
-#newgames {
-  background-image: url("https://shuriken-store.github.io/shuriken/images/controls.png");
-  background-size:  70%;
 }
 
 #bird {
