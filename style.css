@@ -500,6 +500,11 @@ header div {
   background-size: 110%;
 }
 
+#atorooster {
+  background-image: url("C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/250/thumb.png");
+  background-size: 110%;
+}
+
 #itd-store {
   background-image: url("https://i.postimg.cc/3RPFf70w/itd-thumb.png");
   background-size: 110%;
@@ -511,6 +516,11 @@ header div {
 
 #pba-store {
   background-image: url("https://i.postimg.cc/y8SpsfdQ/pba.png");
+  background-size: 110%;
+}
+
+#atorooster-store {
+  background-image: url("https://i.postimg.cc/Hsq8BdFK/thumb.png");
   background-size: 110%;
 }
 
