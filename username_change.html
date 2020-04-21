@@ -181,11 +181,12 @@
         }
       }
     </style>
-    <script>
-        var myname = prompt("Escolha um nome de usuário");
-        localStorage.setItem('username', myname);
-        var username = localStorage.getItem('username');
-        alert("Seu nome foi definido como: " + username);
+    <script type="text/javascript">
+        function changeText() {
+	        var myname = document.getElementById('inputplace').value;
+          localStorage.setItem('username', myname);
+          alert("Seu nome foi definido como: " + myname);
+        }
     </script>
   </head>
   <body>
@@ -208,8 +209,11 @@
       <div class="line"></div>
       <div class="side join">
         <h1>Usuário</h1>
-        <h2>Uma caixa de diálogo vai aparecer</h2>
-        <h2>para pedir seu nome de usuário</h2>
+        <h2>Escreva o nome aqui:</h2>
+        <div>
+          <input type="text" placeholder="Digite o nome aqui" value="Irineu" id="inputplace" class="input">
+          <input type='button' onclick='changeText()' value='Mudar' class='join'>
+        </div>
       </div>
     </div>
 
