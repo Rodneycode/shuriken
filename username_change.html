@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br"><head>
+    <title>Shuriken | Usuário</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        background-color: #352b31;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        word-break: break-word;
+      }
+      header {
+        left:     0;
+        padding:  1em;
+        position: fixed;
+        top:      0;
+        z-index:  18;
+
+        height: 3em;
+        width:  100%;
+
+        transition: 0.5s;
+      }
+
+      header div {
+        display: inline-block;
+
+        height: 100%;
+      }
+      .welcome {
+        display: flex;
+        align-items: top;
+        color: #ffffff;
+        margin: 0 50px;
+      }
+      .side {
+        flex: 1 0 0;
+      }
+      .files {
+        --colour: #63bd67;
+        text-align: right;
+      }
+      .join {
+        --colour: #6295bd;
+      }
+      .line {
+        background-color: rgba(0, 0, 0, 0.1);
+        margin: 0 50px;
+        width: 1px;
+      }
+      .side h1 {
+        font-weight: normal;
+        font-size: 32px;
+      }
+      .side h2 {
+        font-weight: normal;
+        font-size: 25px;
+      }
+      .button {
+        -webkit-appearance: none;
+        border: none;
+        background: none;
+        border-radius: 5px;
+        background-color: var(--colour);
+        color: white;
+        font: inherit;
+        font-size: 24px;
+        height: 40px;
+        width: 100%;
+        cursor: pointer;
+      }
+      .input {
+        -webkit-appearance: none;
+        border: 3px solid var(--colour);
+        background: none;
+        border-radius: 5px;
+        background-color: white;
+        font: inherit;
+        color: #000;
+        font-size: 24px;
+        padding: 5px;
+        height: 40px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      ::-webkit-input-placeholder {
+        color: inherit;
+        opacity: 0.3;
+      }
+      .hidden {
+        display: none;
+      }
+      .error {
+        color: #dd5454;
+        font-size: 16px;
+      }
+      @media (max-width: 510px) {
+
+        .welcome, .line {
+          margin: 0 20px;
+        }
+
+      }
+
+      /* WAVES */
+
+      #wave-container {
+        left:      0;
+        position:  fixed;
+        top:       0;
+        transform: rotate(80deg);
+      }
+
+      #wave-container > .wave {
+        background:    #614556;
+        border-radius: 43%;
+        opacity:       0.4;
+
+        margin-left:     -200px;
+        margin-top:      -2300px;
+        transform-origin: 50% 48%;
+        left:             10%;
+        position:         absolute;
+        top:              3%;
+
+        width:  1500px;
+        height: 1300px;
+
+        animation: wave-animation 7s infinite linear;
+      }
+
+      #wave-container > .wave:nth-child(2) {
+        background: #614556;
+        opacity:    0.1;
+
+        position: fixed;
+
+        animation: wave-animation 3s infinite linear;
+      }
+
+      #wave-container > .wave:nth-child(3) {
+        background-color: #614556;
+
+        position: fixed;
+
+        animation: wave-animation 7.5s infinite linear;
+      }
+
+      #wave-container:after {
+        content: "";
+
+        display: block;
+
+        left:    0;
+        top:     0;
+
+        height: 100%;
+        width:  100%;
+
+        transform: translate3d(0, 0, 0);
+      }
+
+      @keyframes wave-animation {
+        from {
+          transform: rotate(0deg);
+        } to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <script>
+        var myname = prompt("Escolha um nome de usuário");
+        localStorage.setItem('username', myname);
+        var username = localStorage.getItem('username');
+        alert("Seu nome foi definido como: " + username);
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="clock">--:-- AM</div>
+    </header>
+    <!-- Background -->
+    <div id="wave-container">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <div class="welcome">
+      <div class="side create">
+        <h1>Shuriken</h1>
+        <a href="./index.html">
+        <img src="./images/back.png" id="files"></a>
+        <h2>Voltar</h2>
+      </div>
+      <div class="line"></div>
+      <div class="side join">
+        <h1>Usuário</h1>
+        <h2>Uma caixa de diálogo vai aparecer</h2>
+        <h2>para pedir seu nome de usuário</h2>
+      </div>
+    </div>
+
+</body></html>
