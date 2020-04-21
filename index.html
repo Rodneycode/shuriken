@@ -8,7 +8,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- TITLE -->
-<title>Shuriken</title><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css'><link rel="stylesheet" href="./style.css">
+<title>Shuriken</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css'>
+<link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
@@ -103,7 +105,7 @@
       <div id="error"      class="sub-item"></div>
     </div>
   </div>
-  
+
   <!-- Workshop -->
   <div class="menu-item">
     <div class="item-img workshop"></div>
@@ -115,14 +117,14 @@
       <span class="item-title">Nenhum item disponível</span>
     </div>
   </div>
-  
+
   <!-- Chat -->
   <div id="chat" class="menu-item" onclick='window.location="https://shuriken-store.github.io/shuriken/community/chat.html"'>
     <div class="item-img chat"></div>
     <div class="item-subtitle" style="display: none;">Iniciar</div>
     <span class="item-title" style="display: none;">Chat da comunidade</span>
   </div>
-  
+
   <!-- Library (BETA) -->
   <div id="library" class="menu-item">
     <div class="item-img library"></div>
@@ -173,7 +175,7 @@
        ></div>
     </div>
   </div>
-  
+
   <!-- Settings -->
   <div class="menu-item">
     <div class="item-img settings"></div>
@@ -208,7 +210,7 @@
        ></div>
     </div>
   </div>
-  
+
 </div>
 
 <!-- Context menu -->
@@ -231,6 +233,12 @@
 </div>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script><script  src="./script.js"></script>
+
+  <script>
+    var username = localStorage.getItem('username');
+    var myname = username;
+    document.getElementById("username").innerHTML = "Olá, " + myname;
+  </script>
 
 </body>
 </html>
