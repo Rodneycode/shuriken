@@ -476,6 +476,14 @@ header div {
   background-image: url("https://i.postimg.cc/GpwYx3CX/Error.gif");
 }
 
+#kuelho {
+  background-image: url("https://i.postimg.cc/zvXZYSJZ/Profile-Picture-export.png");
+}
+
+#tokoyami {
+  background-image: url("https://i.postimg.cc/N0h3jwgx/Tokoyami.png");
+}
+
 #artwork {
   background-image: url("https://i.postimg.cc/Wb1dGFJN/artwork-B.png");
   background-size:     90%;
@@ -483,11 +491,6 @@ header div {
 
 #itd {
   background-image: url("C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/102/thumb.png");
-  background-size: 110%;
-}
-
-#nothing {
-  background-image: url("https://i.postimg.cc/sgKXF7nL/nothing-to-view-here.png");
   background-size: 110%;
 }
 
