@@ -1,253 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt" >
+<html lang="en" >
 <head>
   <meta charset="UTF-8">
   <title>Shuriken</title>
-  <!-- META -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- TITLE -->
-<title>Shuriken</title>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css'>
+  <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<!--
-  Shuriken | Game Store and Launcher
--->
-
-<!-- Menu -->
-<header>
-  <div id="plus" onclick='window.location="https://discord.gg/2a8fq5e"'></div>
-  <div id="info" onclick='window.location="https://shuriken-store.github.io/shuriken/news/news.html"'></div>
-  <div id="notifications"></div>
-  <div id="user"></div>
-  <div id="username">Usuário</div>
-  <div id="close" onclick="self.close()"></div>
-  <div id="clock">--:-- AM</div>
-</header>
-
-<!-- Menu -->
-<div id="xmb-menu">
-
-  <!-- Store menu item -->
-  <div class="menu-item">
-    <div class="item-img ps-store"></div>
-    <div class="item-subtitle ascii">▼</div>
-    <span class="item-title">Games</span>
-
-    <!-- Store items -->
-    <div class="rss">
-      <div id="survivor-store"      class="sub-item" onclick='window.location="https://drive.google.com/u/0/uc?id=1Zug1g_Ngi_azbkmZROb2f215TW5tghvY&export=download"'
-       context-menu="
-                     Survivor => #
-                     ----
-                     Download => https://drive.google.com/u/0/uc?id=1Zug1g_Ngi_azbkmZROb2f215TW5tghvY&export=download
-                     Informações => https://shuriken-store.github.io/shuriken/info/survivor.html
-                     "
-       ></div>
-      <div id="itd-store"      class="sub-item" onclick='window.location="https://drive.google.com/u/0/uc?id=1yzuHormvyjimMGGDTDzxu4MRbFE1Aihp&export=download"'
-       context-menu="
-                     Into The DIMENSIONS => #
-                     ----
-                     Download => https://drive.google.com/u/0/uc?id=1yzuHormvyjimMGGDTDzxu4MRbFE1Aihp&export=download
-                     Informações => https://shuriken-store.github.io/shuriken/info/itd.html
-                     "
-       ></div>
-      <div id="pba-store"      class="sub-item" onclick='window.location="https://drive.google.com/u/0/uc?id=1tw4hYNTA1AiuGaeHt7Vm2l-aitfDzqLo&export=download"'
-       context-menu="
-                     Pixel BATTLE ARENA => #
-                     ----
-                     Download => https://drive.google.com/u/0/uc?id=1tw4hYNTA1AiuGaeHt7Vm2l-aitfDzqLo&export=download
-                     Informações => https://shuriken-store.github.io/shuriken/info/pba.html
-                     "
-       ></div>
-      <div id="atorooster-store"      class="sub-item" onclick='window.location="https://drive.google.com/u/0/uc?id=1tw4hYNTA1AiuGaeHt7Vm2l-aitfDzqLo&export=download"'
-       context-menu="
-                     A tale of a rooster => #
-                     ----
-                     Download => https://gofile.io/?c=0PH2kn
-                     Informações => https://shuriken-store.github.io/shuriken/info/a-tale-of-a-rooster.html
-                     "
-       ></div>
-      <div id="isolation-store"      class="sub-item" onclick='window.location="https://drive.google.com/u/0/uc?id=1tw4hYNTA1AiuGaeHt7Vm2l-aitfDzqLo&export=download"'
-        context-menu="
-                      Isolation => #
-                      ----
-                      Download => https://gofile.io/?c=06Xjit
-                      Informações => https://shuriken-store.github.io/shuriken/info/isolation.html
-                      "
-        ></div>
-    </div>
-  </div>
-
-  <!-- Other menu items -->
-  <div class="menu-item">
-    <div class="item-img new"></div>
-    <div class="item-subtitle ascii">▼</div>
-    <span class="item-title">O que há de novo?</span>
-
-    <!-- What's New -->
-    <div class="rss">
-      <span class="item-title">Atualização: Nova aba "Chat"</span>
-    </div>
-  </div>
-
-  <!-- Artworks -->
-  <div class="menu-item">
-    <div class="item-img artwork"></div>
-    <div class="item-subtitle ascii">▼</div>
-    <span class="item-title">Artworks</span>
-
-    <!-- Arts -->
-    <div class="rss">
-      <div id="bird"      class="sub-item"></div>
-      <div id="code"      class="sub-item"></div>
-      <div id="error"     class="sub-item"></div>
-      <div id="kuelho"     class="sub-item"></div>
-      <div id="tokoyami"  class="sub-item"></div>
-    </div>
-  </div>
-
-  <!-- Workshop -->
-  <div class="menu-item">
-    <div class="item-img workshop"></div>
-    <div class="item-subtitle ascii">▼</div>
-    <span class="item-title">Oficina</span>
-
-    <!-- Items -->
-    <div class="rss">
-      <span class="item-title">Nenhum item disponível</span>
-    </div>
-  </div>
-
-  <!-- Chat -->
-  <div id="chat" class="menu-item" onclick='window.location="https://shuriken-store.github.io/shuriken/community/chat.html"'>
-    <div class="item-img chat"></div>
-    <div class="item-subtitle" style="display: none;">Iniciar</div>
-    <span class="item-title" style="display: none;">Chat da comunidade</span>
-  </div>
-
-  <!-- Library (BETA) -->
-  <div id="library" class="menu-item">
-    <div class="item-img library"></div>
-    <div class="item-subtitle ascii">▼</div>
-    <span class="item-title">Biblioteca</span>
-
-    <!-- Games -->
-    <div class="rss">
-      <div id="survivor"      class="sub-item" onclick='window.location="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/100/game.html"'
-       context-menu="
-                     Iniciar Survivor => C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/100/game.html
-                     ----
-                     Atualizar => https://drive.google.com/u/0/uc?id=1Zug1g_Ngi_azbkmZROb2f215TW5tghvY&export=download
-                     Esconder => javascript:$('#game-survivor').css({display: 'none'}); offcontextmenu();
-                     Informações => https://shuriken-store.github.io/shuriken/info/survivor.html
-                     "
-       ></div>
-      <div id="itd"      class="sub-item" onclick='window.location="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/102/game.html"'
-       context-menu="
-                     Iniciar Into The DIMENSIONS => C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/102/game.html
-                     ----
-                     Atualizar => https://drive.google.com/u/0/uc?id=1yzuHormvyjimMGGDTDzxu4MRbFE1Aihp&export=download
-                     Esconder => javascript:$('#game-itd').css({display: 'none'}); offcontextmenu();
-                     Informações => https://shuriken-store.github.io/shuriken/info/itd.html
-                     "
-       ></div>
-      <div id="pba"      class="sub-item" onclick='window.location="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/101/game.html"'
-       context-menu="
-                     Iniciar Pixel BATTLE ARENA => C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/101/game.html
-                     ----
-                     Atualizar => https://drive.google.com/u/0/uc?id=1tw4hYNTA1AiuGaeHt7Vm2l-aitfDzqLo&export=download
-                     Esconder => javascript:$('#game-pba').css({display: 'none'}); offcontextmenu();
-                     Informações => https://shuriken-store.github.io/shuriken/info/pba.html
-                     "
-       ></div>
-      <div id="atorooster"      class="sub-item" onclick='window.location="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/250/game.html"'
-       context-menu="
-                     Iniciar A tale of a rooster => C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/250/game.html
-                     ----
-                     Atualizar => https://gofile.io/?c=0PH2kn
-                     Esconder => javascript:$('#game-atorooster').css({display: 'none'}); offcontextmenu();
-                     Informações => https://shuriken-store.github.io/shuriken/info/a-tale-of-a-rooster.html
-                     "
-       ></div>
-      <div id="isolation"      class="sub-item" onclick='window.location="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/200/game.html"'
-        context-menu="
-                      Iniciar Isolation => C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/200/game.html
-                      ----
-                      Atualizar => https://gofile.io/?c=06Xjit
-                      Esconder => javascript:$('#game-atorooster').css({display: 'none'}); offcontextmenu();
-                      Informações => https://shuriken-store.github.io/shuriken/info/isolation.html
-                      "
-        ></div>
-    </div>
-  </div>
-
-  <!-- Settings -->
-  <div class="menu-item">
-    <div class="item-img settings"></div>
-    <div class="item-subtitle ascii">▼</div>
-    <span class="item-title">Configurações</span>
-
-    <!-- Options -->
-    <div class="rss">
-      <div id="username-change"      class="sub-item" onclick='window.location="https://shuriken-store.github.io/shuriken/username_change.html"'
-       context-menu="
-                     Usuário => #
-                     ----
-                     Mudar nome => https://shuriken-store.github.io/shuriken/username_change.html
-                     "
-           ></div>
-      <div id="controls"      class="sub-item"
-       context-menu="
-                     Controles => #
-                     ----
-                     Mouse - Movimentar Boxes => #
-                     Botão direito do mouse - Ação => #
-                     "
-           ></div>
-       <div id="download"      class="sub-item"
-       context-menu="
-                     Sobre => #
-                     ----
-                     Checar => C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/system/version_view.html
-                     "
-       ></div>
-    </div>
-  </div>
-
-</div>
-
-<!-- Context menu -->
-<div id="context-menu"></div>
-
-<!-- Loading animation container -->
-<div class="loading-container display">
-  <div class="loading-icon"><img/></div>
-  <div class="loading-icon"><img/></div>
-  <div class="loading-icon"><img/></div>
-  <div class="loading-icon"><img/></div>
-  <img class="logo" src="images/header-big.png"/>
-</div>
-
-<!-- Background -->
-<div id="wave-container">
-  <div class="wave"></div>
-  <div class="wave"></div>
-  <div class="wave"></div>
+<div class="wrapper flex flex-col">
+	<header class="flex v-center">
+		<a data-attr="User" href="username_change.html" class="profile">
+			<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/users/user.png" />
+		</a>
+		<div class="time">
+			<span id="time"></span>
+		</div>
+		<div class="battery">
+			<img src="./images/exit.png" />
+		</div>
+	</header>
+	<main>
+		<div class="games">
+			<a href="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/100/game.html" class="item">
+				<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/games/100/thumb.jpg"/></a>
+			<a href="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/102/game.html" class="item">
+				<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/games/102/thumb.png"/></a>
+			<a href="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/101/game.html" class="item">
+				<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/games/101/thumb.png"/></a>
+			<a href="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/250/game.html" class="item">
+				<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/games/250/thumb.png"/></a>
+			<a href="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/210/game.html" class="item">
+				<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/games/200/thumb.png"/></a>
+		</div>
+		<nav>
+			<a data-attr="Biblioteca" href="./index.html"><img widht="80" height="80" src="./images/library.png" /></a>
+			<a data-attr="Novidades" href="https://shuriken-store.github.io/shuriken/news/news.html"><img widht="80" height="80" src="./images/new.png" /></a>
+			<a data-attr="Shuriken Store" href="./store.html"><img widht="80" height="80" src="./images/games-B.png" /></a>
+			<a data-attr="Artworks" href="./arts.html"><img widht="80" height="80" src="./images/artwork-B.png" /></a>
+			<a data-attr="Chat" href="./community/chat.html"><img widht="80" height="80" src="./images/Chat-B.png" /></a>
+			<a data-attr="Configurações" href="./version_view.html"><img widht="80" height="80" src="./images/settings.png" /></a>
+		</nav>
+	</main>
+	<footer class="flex">
+		<div class="mode">
+			<img src="./images/info.png" />
+		</div>
+		<div class="accept flex v-center">
+			<img src="./images/controls.png" />
+			<span>[<] e [>]=rolar pelos boxes</span>
+		</div>
+	</footer>
 </div>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script><script  src="./script.js"></script>
-
-  <script>
-    var username = localStorage.getItem('username');
-    var myname = username;
-    document.getElementById("username").innerHTML = "Olá, " + myname;
-  </script>
+  <script  src="./script.js"></script>
 
 </body>
 </html>
