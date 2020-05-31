@@ -192,6 +192,18 @@ main {
 	box-shadow: var(--shadow);
 	overflow: hidden;
 }
+.games .banner {
+	display: inline-block;
+	margin: 0 7px;
+	--d: 255px;
+	height: var(--d);
+	width: 500;
+	flex-shrink: 0;
+	background: var(--bg);
+	border: 3px solid var(--solid);
+	box-shadow: var(--shadow);
+	overflow: hidden;
+}
 .games .item img {
 	width: 100%;
 }
