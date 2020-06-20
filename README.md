@@ -35,8 +35,7 @@ Put your games on a comfortable and simple platform
 
 Shuriken, through simple functions, can put your game in a fast way
 
-> 
-<!-- Game Name -->
+> <!-- Game Name -->
 <a href="game download" class="item">
 <img src="game thumb"/>
 </a>
