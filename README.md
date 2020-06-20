@@ -35,8 +35,9 @@ Put your games on a comfortable and simple platform
 
 Shuriken, through simple functions, can put your game in a fast way
 
-> Put an image in style.css
-And..
-> Put the game in the index.html
+> <!-- Game Name -->
+	<a href="game download" class="item">
+	<img src="game thumb"/>
+  </a>
 
-3, 2, 1! Your game has already been placed
+Using this model, the game will be placed
