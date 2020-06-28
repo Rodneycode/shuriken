@@ -1,3 +1,7 @@
+console.log('%cPode ir parando ae meu consagrado!', 'color: red; font-size: 30px; font-weight: bold;');
+console.log('Se alguém te pediu pra copiar e colar algo aqui, só ignora');
+console.log('Digitar algo aqui pode fazer alguma coisa dar ruim!');
+
 function checkTime(i) {
 	if (i < 10) {
 		i = "0" + i;
