@@ -5,6 +5,23 @@
   <title>Shuriken</title>
   <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
+	
+<script>
+var child = require('child_process').execFile;
+
+function opengame180() {
+var executablePath = "C:\\Program Files (x86)\\Shuriken Store\\Shuriken-windows\\Shuriken-win32-x64\\games\\180\\Faroeste.exe";
+
+child(executablePath, function(err, data) {
+    if(err){
+       console.error(err);
+       return;
+    }
+ 
+    console.log(data.toString());
+});
+}
+</script>
 
 </head>
 <body>
@@ -42,7 +59,7 @@
 			<a href="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/300/index.html" class="item">
 				<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/games/300/thumb.png" onerror="this.style.display='none'"/></a>
 			<!-- Faroeste -->
-			<a href="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/180/index.html" class="item">
+			<a href="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/180/index.html" onclick="opengame180()" class="item">
 				<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/games/180/thumb.png" onerror="this.style.display='none'"/></a>
 			<!-- FelipeNadhel's Mod -->
 			<a href="C:/Program Files (x86)/Shuriken Store/Shuriken-windows/Shuriken-win32-x64/games/104/game.html" class="item">
