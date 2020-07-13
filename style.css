@@ -61,6 +61,12 @@ span {
 	line-height: 1;
 }
 
+span2 {
+	display: inherit;
+	line-height: 1;
+	font-size: 25px;
+}
+
 a {
 	position: relative;
 	--focus-light: #4b6d85;
@@ -206,6 +212,11 @@ main {
 }
 .games .item img {
 	width: 100%;
+}
+
+.center {
+  display: table;
+  margin: 0 auto;
 }
 
 main nav {
