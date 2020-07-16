@@ -67,6 +67,12 @@ span2 {
 	font-size: 25px;
 }
 
+span3 {
+	display: inherit;
+	line-height: 1;
+	font-size: 15px;
+}
+
 a {
 	position: relative;
 	--focus-light: #4b6d85;
