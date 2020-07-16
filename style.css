@@ -212,6 +212,7 @@ main {
 }
 .games .item img {
 	width: 100%;
+	background-size: 100%;
 }
 
 .center {
