@@ -36,4 +36,4 @@ function randomText() {
     return randomtxt[Math.floor((Math.random() * 3.99))];
 }
 
-document.getElementById("random").innerHTML = randomtext();
+document.getElementById("random").innerHTML = randomText();
