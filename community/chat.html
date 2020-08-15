@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
+<html lang="pt-br"><head>
     <title>Shuriken | Chat da Comunidade</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js" charset="utf-8"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
     <style>
       html, body {
         width: 100%;
@@ -205,7 +205,7 @@
         margin-left: 10px;
         cursor: pointer;
       }
-      
+
       /* WAVES */
 
       #wave-container {
@@ -275,9 +275,20 @@
     </style>
   </head>
   <body>
-    <header>
-      <div id="clock">--:-- AM</div>
-    </header>
+    	<header class="flex v-center">
+		<a data-attr="User" class="profile">
+			<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/users/user.png">
+		</a>
+		<div class="time">
+			<span id="time"></span>
+		</div>
+    <div class="time">
+			<span id="time"></span>
+		</div>
+		<a href="../index.html"><div class="battery">
+			<img src="../images/back.png">
+		</div></a>
+	</header>
     <!-- Background -->
     <div id="wave-container">
       <div class="wave"></div>
@@ -288,9 +299,6 @@
       <div class="side create">
         <h1>Criar um Chat</h1>
         <button class="button" id="create">Criar</button>
-        <div>
-          <button onclick="window.location='https://shuriken-store.github.io/shuriken/'" class="button">Voltar a Shuriken</button>
-        </div>
       </div>
       <div class="line"></div>
       <div class="side join">
@@ -300,8 +308,10 @@
         <p class="error hidden" id="id-error"></p>
       </div>
     </div>
+
     <div class="chat" id="chat"></div>
-    <input type="text" placeholder="Envie uma mensagem digitando aqui" id="message" disabled>
+    <input type="text" placeholder="Envie uma mensagem digitando aqui" id="message" disabled="">
+
     <script>
 const consonants = 'bdfghjklmnprstvwz';
 const vowels = 'aeiou';
@@ -403,7 +413,8 @@ function createChat(on = {}, id = randomWord(), messages = [], userData = {}) {
         myID: peer.id
       });
       if (on.initialize) on.initialize(messages, userData);
-      announce(`O ID do Chat é: ${id}; . Compartilhe o link para que outras pessoas entrem!`);
+      announce(`O ID do Chat é: "${id}, compartilhe o link para que outras pessoas entrem!`);
+      document.getElementById("chat-id").textContent = `ID do Chat: "${id}"`
     });
     peer.on('error', rej);
   });
@@ -549,11 +560,11 @@ async function launchChat(chatGetter) {
           }
           case 'setname': case 'nick': {
             const name = msg.slice(1 + command.length + 1);
-            if (!name) selfPost('Display names must be between 3-20 characters long and may only contain letters and spaces.');
+            if (!name) selfPost('Os nomes devem ter entre 3 e 20 caracteres e podem conter apenas letras e espaços.');
             else if (name.length < 3) selfPost('Nome muito curto! (min 3 letras) #minimalista.');
-            else if (name.length > 20) selfPost('Nome muito grande! (max 20 letras).');
+            else if (name.length > 20) selfPost('Nome muito grande! (máximo: 20 letras).');
             else if (name.includes('  ')) selfPost('O nome tem mais de um espaço em uma linha.');
-            else if (illegalNameCharsRegex.test(name)) selfPost('O nome tem caracteres indesejáveis, tá tentando evitar ban?');
+            else if (illegalNameCharsRegex.test(name)) selfPost('O nome tem caracteres indesejáveis!');
             else obj.setName(name);
             break;
           }
@@ -563,7 +574,7 @@ async function launchChat(chatGetter) {
               obj.setColour(nameColours[colour]);
               selfPost('Cor do nome mudado para ' + colour);
             }
-            else selfPost('Colours: ' + Object.keys(nameColours).join(', '));
+            else selfPost('Cores: ' + Object.keys(nameColours).join(', '));
             break;
           }
           case 'me': {
@@ -589,7 +600,8 @@ async function launchChat(chatGetter) {
       const fragment = document.createDocumentFragment();
       messages.forEach(msg => fragment.appendChild(createMessage(msg)));
       chat.appendChild(fragment);
-      selfPost('Olá! Digite /help para uma lista de comandos legais :) AVISO: Qualquer coisa que seja falada, ou postada aqui como: linguagem inapropriada, material nocivo, conteúdos +18, spam, entre outros, NÃO SÃO DE RESPONSABILIDADE DOS MODERADORES, E CRIADORES DA SHURIKEN');
+      selfPost('Olá! Digite /help para uma lista de comandos legais :)\n'
+        + 'AVISO: Qualquer coisa que seja falada, ou postada aqui como: linguagem inapropriada, material nocivo, conteúdos +18, spam, entre outros, NÃO SÃO DE RESPONSABILIDADE DOS MODERADORES, E CRIADORES DA SHURIKEN.');
     },
     message(msg) {
       chat.appendChild(createMessage(msg));
@@ -609,11 +621,11 @@ async function launchChat(chatGetter) {
   hostClosedMessage.classList.add('message');
   const hostClosedContent = document.createElement('span');
   hostClosedContent.classList.add('content');
-  hostClosedContent.textContent = 'Parece que o host do bate-papo saiu :O, assumir o controle ou começar a baderna?';
+  hostClosedContent.textContent = 'Parece que o host do bate-papo saiu :O, assumir o controle?';
   hostClosedMessage.appendChild(hostClosedContent);
   const hostClosedBtn = document.createElement('button');
   hostClosedBtn.classList.add('chat-btn');
-  hostClosedBtn.textContent = 'Sure';
+  hostClosedBtn.textContent = 'Sim';
   hostClosedBtn.addEventListener('click', e => {
     const messagesClone = JSON.parse(JSON.stringify(messages));
     const userDataClone = JSON.parse(JSON.stringify(userData));
@@ -685,43 +697,7 @@ if (params.get('chat')) {
         });
   }
 }
-function notify() {
-
-  for(var index = notifications.index = 0, timeout = 7000, length = notifications.length; index < length; index++) {
-    setTimeout(function() {
-      var message = notifications[notifications.index++];
-
-      if(message.length > 45)
-        message = message.slice(0, 42) + '...';
-
-      $('#notifications')
-        .addClass("animated slideInDown")
-        .text(message);
-
-      setTimeout(function() {
-        $('#notifications').removeClass("animated slideInDown");
-      }, timeout - 1000);
-    }, index * timeout);
-  }
-
-  setTimeout(notify, length * timeout);
-}
-function initialise() {
-  "use strict";
-
-  setInterval(function() {
-    var date = new Date(),
-        hrs  = date.getHours(),
-        mins = date.getMinutes();
-
-    $('#clock').text(
-      (" " + (hrs < 13? hrs || 12: hrs - 12)).slice(-2) + ":" + ("0" + mins).slice(-2) + " " + (hrs < 12? "AM": "PM")
-    );
-  }, 1000);
-
-  notify();
-}
-    </script>
-
-  </body>
+  </script>
+    <script src="../script.js"></script>
+</body>
 </html>
