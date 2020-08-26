@@ -11,9 +11,16 @@
 <!-- partial:index.partial.html -->
 <div class="wrapper flex flex-col">
 	<header class="flex v-center">
+    <!-- Usuário e pesquisa -->
 		<a data-attr="User" href="username_change.html" class="profile">
-			<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/users/user.png" />
+			<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/users/user.png">
 		</a>
+    <input type="text" placeholder="Pesquisar por jogos" id="link_id" class="link_id">
+    <a data-attr="Pesquisar" class="category" onclick="goToSearch()">
+      <img src="./images/search.png">
+    </a>
+
+    <!-- Categorias -->
 		<a data-attr="Ação" href="./store_category1.html" class="category">
 			<img src="./images/store_action.png" />
 		</a>
