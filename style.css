@@ -1,297 +1,122 @@
-/*=========== global =============*/
-:focus {
-	outline: 0;
+html,
+body,
+.background {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  background:#352b31;
+  text-align:center
+}
+@font-face {
+  font-family: Oxygene;
+  font-style: light;
+  font-weight: 300;
+  src: url(https://discordapp.com/assets/16801bfdf51ed88e69bc90626a3ea436.woff) format('woff')
 }
 
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
+@font-face {
+  font-family: Oxygene;
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://discordapp.com/assets/d153359b5d87601d2b9c708b7ae2db02.woff) format('woff')
 }
 
-*::-webkit-scrollbar, *::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0);
-
-  height: 5px;
-  width:  5px;
+@font-face {
+  font-family: Oxygene;
+  font-style: medium;
+  font-weight: 600;
+  src: url(https://discordapp.com/assets/a934ab008c7f6a2274ec441f6be0696a.woff) format('woff')
 }
 
-*::-webkit-scrollbar-track {
-  opacity: 0.3;
+@font-face {
+  font-family: Oxygene;
+  font-style: semibold;
+  font-weight: 650;
+  src: url(https://discordapp.com/assets/877ef48bf9fcfee590f0ba64de101b59.woff) format('woff')
 }
 
-*::-webkit-scrollbar-track-piece:start, *::-webkit-scrollbar-track-piece:end {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 0;
+@font-face {
+  font-family: Oxygene;
+  font-style: bold;
+  font-weight: 700;
+  src: url(https://discordapp.com/assets/2e004dd717cdc58b9ccb361d286ebbce.woff) format('woff')
+}
+.logo{
+  background-image:url(images/stuff.png);
+  width:500px;
+  height:500px;
+  background-size:100%;
+  display:inline-block;
+  background-repeat:no-repeat;
+  background-position:50%;
+  margin-left:-5px;
+  margin-bottom:-70px
+}
+.title{
+  font-smooth: auto;
+  padding-top:35px;
+  font-family: 'Whitney', sans-serif;
+  font-weight:700;
+  color:#fff;
+  font-size:40px
+}
+.step{
+  font-smooth: auto;
+  font-family: 'Whitney', sans-serif;
+  font-weight:700;
+  color:#fff;
+  font-size:22px;
+  opacity:0.8
+}
+.link {
+  text-decoration:none;
+  color:#fff;
+  font-family: 'Whitney', sans-serif;
+  font-size:13px;
+  opacity:0.8;
+  margin-right:auto;
+  margin-left:auto;
+  padding:10px 20px;
+  border:2px solid #fff;
+  border-radius:100px;
 }
 
-*::-webkit-scrollbar-thumb {
-  background:    #FFF;
-  border-radius: 0;
+.link:hover{
+  opacity:1;
+  }
+.instructions{
+  font-smooth: auto;
+  font-family: 'Whitney', sans-serif;
+  font-weight:650;
+  color:rgba(255,255,255,0.65);
+  font-size:16px;
 }
-
-*::-webkit-scrollbar-button {
-  background: rgba(0,0,0,0);
+.highlight{
+  background:rgba(255,255,255,0.1);
+  display:inline-block;
+  opacity:1;
+  border-radius:2px;
+  padding:0 5px;
+  color:#fff
 }
-
-.flex {
-	display: -webkit-box;
-	display: flex;
+.highlight:hover{
+  background:rgba(255,255,255,0.2);
 }
-
-.flex-row {
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	        flex-direction: row;
+.bottom-wrapper{
+  width:100%;
+  background:#2C2F33;
+  text-align:center;
+  padding-top:30px;
+  padding-bottom:30px;
 }
-
-.flex-col {
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	        flex-direction: column;
+.wsite{
+  text-decoration:none;
+  color:#fff;
+  font-family: 'Whitney', sans-serif;
+  font-size:18px;
+  opacity:0.5;
+  transition:all 100ms ease
 }
-
-.v-center {
-	-webkit-box-align: center;
-	        align-items: center;
-}
-
-body {
-	--bg: #352b31;
-	background: var(--bg);
-}
-
-.wrapper {
-	--static: #FFFFFF;
-	--solid: #FFF;
-	--shadow: 0 0 5px rgba(0, 0, 0, .05);
-	position: relative;
-	margin: 0 auto;
-	padding: 20px;
-	height: 100vh;
-	width: 100%;
-}
-
-html {
-	font-family: 'Oxygen';
-	color: #FFFFFF;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
-}
-
-span {
-	display: inline-block;
-	line-height: 1;
-}
-
-span2 {
-	display: inherit;
-	line-height: 1;
-	font-size: 25px;
-}
-
-span3 {
-	display: inherit;
-	line-height: 1;
-	font-size: 15px;
-}
-
-a {
-	position: relative;
-	--focus-light: #4b6d85;
-	--focus-dark: #517c99;
-}
-
-a:after {
-	display: none;
-	content: attr(data-attr);
-	position: absolute;
-	bottom: -80px;
-	left: 50%;
-	-webkit-transform: translate(-50%, -42.5px);
-	        transform: translate(-50%, -42.5px);
-	font-size: 26px;
-	font-weight: 300;
-	white-space: pre;
-	color: var(--focus-dark);
-}
-
-a:hover:after,
-a:focus:after {
-	display: inline-block;
-}
-
-a:hover,
-a:focus {
-	-webkit-animation: focus 1s infinite;
-	        animation: focus 1s infinite;
-}
-
-@-webkit-keyframes focus {
-	0% {
-		box-shadow: var(--shadow), 0 0 0 5px var(--focus-light);
-	}
-	50% {
-		box-shadow: var(--shadow), 0 0 0 5px var(--focus-dark);
-	}
-	100% {
-		box-shadow: var(--shadow), 0 0 0 5px var(--focus-light);
-	}
-}
-
-@keyframes focus {
-	0% {
-		box-shadow: var(--shadow), 0 0 0 5px var(--focus-light);
-	}
-	50% {
-		box-shadow: var(--shadow), 0 0 0 5px var(--focus-dark);
-	}
-	100% {
-		box-shadow: var(--shadow), 0 0 0 5px var(--focus-light);
-	}
-}
-
-
-/*=========== header =============*/
-
-header {
-	margin-bottom: auto;
-	padding: 0 25px;
-	font-size: 28px;
-	font-weight: 600;
-}
-
-header > * {
-	margin: 0 10px;
-}
-
-header > *:first-child,
-.games .item:first-child {
-	margin-left: 0;
-}
-
-header > *:last-child,
-.games .item:last-child {
-	margin-right: 0;
-}
-
-a.profile {
-	margin-right: auto;
-	--d: 60px;
-	width: var(--d);
-	height: var(--d);
-	border: 3px solid var(--solid);
-	background: ;
-	box-shadow: var(--shadow);
-	border-radius: 0%;
-}
-
-a.profile:after {
-	font-size: .75em;
-}
-
-.battery span i {
-	font-style: initial;
-	font-size: .6em;
-}
-
-
-/*=========== main =============*/
-
-main {
-	position: relative;
-	margin: 0 -20px;
-}
-
-.games {
-	position: relative;
-	margin-bottom: 50px;
-	padding: 10px 95px;
-	overflow-x: scroll;
-	white-space: nowrap;
-}
-
-.games::-webkit-scrollbar {
-	height: 0px;
-}
-
-.games .item {
-	display: inline-block;
-	margin: 0 7px;
-	--d: 255px;
-	height: var(--d);
-	width: var(--d);
-	flex-shrink: 0;
-	background: var(--bg);
-	border: 3px solid var(--solid);
-	box-shadow: var(--shadow);
-	overflow: hidden;
-}
-.games .banner {
-	display: inline-block;
-	margin: 0 7px;
-	--d: 255px;
-	height: var(--d);
-	width: 500;
-	flex-shrink: 0;
-	background: var(--bg);
-	border: 3px solid var(--solid);
-	box-shadow: var(--shadow);
-	overflow: hidden;
-}
-.games .item img {
-	width: 100%;
-}
-
-.center {
-  display: table;
-  margin: 0 auto;
-}
-
-main nav {
-	text-align: center;
-	margin-bottom: 50px;
-}
-
-main nav a {
-	display: -webkit-inline-box;
-	display: inline-flex;
-	-webkit-box-pack: center;
-	        justify-content: center;
-	margin: 0 10px;
-	--d: 85px;
-	height: 80;
-	width: 80;
-	box-shadow: var(--shadow);
-	border-radius: 0%;
-}
-
-
-/*=========== footer =============*/
-
-footer {
-	position: relative;
-	margin-top: auto;
-	padding: 20px 25px 0;
-	font-size: 24px;
-	border-top: 2px solid var(--static);
-}
-
-.mode {
-	margin-right: auto;
-}
-
-.accept .btn {
-	--d: 25px;
-	margin-right: 12px;
-	display: inline-block;
-	width: var(--d);
-	height: var(--d);
-	background: var(--static);
-	border-radius: 100%;
-	font-size: .75em;
-	text-align: center;
-	color: var(--bg);
+.bottom-wrapper:hover .wsite{
+  opacity:0.8
 }
