@@ -5,14 +5,28 @@
   <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <div class="wrapper flex flex-col">
 	<header class="flex v-center">
+    <!-- Usuário e pesquisa -->
 		<a data-attr="User" href="username_change.html" class="profile">
 			<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/users/user.png">
 		</a>
+    <input type="text" placeholder="Pesquisar por jogos" id="link_id" class="link_id">
+    <a data-attr="Pesquisar" class="category" onclick="goToSearch()">
+      <img src="./images/search.png">
+    </a>
+
+    <!-- Categorias -->
 		<a data-attr="Ação" href="./store_category1.html" class="category">
 			<img src="./images/store_action.png">
 		</a>
@@ -34,6 +48,8 @@
 		<a data-attr="Todos" href="./store.html" class="category">
 			<img src="./images/store_other.png">
 		</a>
+
+    <!-- Outros -->
 		<div class="time">
 			<span id="time">15:55</span>
 		</div>
@@ -42,9 +58,9 @@
 		</div></a>
 	</header>
 	<main id="main">
-		<div class="center">	
+		<div class="center">
 		<span2>Destaques - Survivor</span2><img src="./images/banner.png"><img onclick="location.href = './games/survivor.html';" src="./images/download.png"></div>
-	<div class="games">
+	<div id="demo" class="games">
 			<!-- Into the DIMENSIONS -->
 			<a href="./games/itd.html" class="item">
 				<img src="https://i.postimg.cc/3RPFf70w/itd-thumb.png"></a>
@@ -80,4 +96,6 @@
 <!-- partial -->
   <script src="./script.js"></script>
 
-</body></html>
+</body>
+
+</html>
