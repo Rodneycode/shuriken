@@ -37,3 +37,10 @@ function randomText() {
 }
 
 document.getElementById("random").innerHTML = randomText();
+
+function goToSearch()
+{
+    var search = 'https://shuriken-store.github.io/shuriken/games/' + document.getElementById('link_id').value;
+		var searchConverted = search.toLowerCase();
+		location.href = searchConverted
+}
