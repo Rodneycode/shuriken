@@ -44,3 +44,8 @@ function goToSearch()
 		var searchConverted = search.toLowerCase();
 		location.href = searchConverted
 }
+
+function removeGame(id, id2) {
+  document.getElementById("id").style.display = 'none';
+	document.getElementById("id2").style.display = 'none';
+}
