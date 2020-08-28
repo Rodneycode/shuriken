@@ -5,74 +5,81 @@
   <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <div class="wrapper flex flex-col">
 	<header class="flex v-center">
     <!-- Usuário e pesquisa -->
-		<a data-attr="User" href="username_change.html" class="profile">
-			<img src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/users/user.png">
+		<a data-attr="User" href="#" class="profile">
+			<img widht="54" height="54" src="file:///C:/Program%20Files%20(x86)/Shuriken%20Store/Shuriken-windows/Shuriken-win32-x64/users/user.png">
 		</a>
     <input type="text" placeholder="Pesquisar por jogos" id="link_id" class="link_id">
     <a data-attr="Pesquisar" class="category" onclick="goToSearch()">
       <img src="./images/search.png">
     </a>
+    <span>Todos os Jogos</span>
 
-    <!-- Categorias -->
-		<a data-attr="Ação" href="./store_category1.html" class="category">
-			<img src="./images/store_action.png">
-		</a>
-		<a data-attr="Aventura" href="./store_category2.html" class="category">
-			<img src="./images/store_adventure.png">
-		</a>
-		<a data-attr="Plataforma" href="./store_category3.html" class="category">
-			<img src="./images/store_platformer.png">
-		</a>
-		<a data-attr="Retrô" href="./store_category4.html" class="category">
-			<img src="./images/store_retro.png">
-		</a>
-		<a data-attr="Point-n-Click" href="./store_category5.html" class="category">
-			<img src="./images/store_pointnclick.png">
-		</a>
-		<a data-attr="Puzzle" href="./store_category6.html" class="category">
-			<img src="./images/store_puzzle.png">
-		</a>
-		<a data-attr="Todos" href="./store.html" class="category">
-			<img src="./images/store_other.png">
-		</a>
-
+    <div class="dropdown">
+      <img src="./images/store_other.png">
+      <div class="dropdown-content">
+        <span>Categorias</span>
+        <!-- Ação -->
+    		<img onclick="window.location.href='./store_category1.html'" src="./images/store_action.png">
+        <span3>Ação</span3>
+        <!-- Aventura -->
+        <img onclick="window.location.href='./store_category2.html'" src="./images/store_adventure.png">
+        <span3>Aventura</span3>
+        <!-- Plataforma -->
+        <img onclick="window.location.href='./store_category3.html'" src="./images/store_platformer.png">
+        <span3>Plataforma</span3>
+        <!-- Retrô -->
+        <img onclick="window.location.href='./store_category4.html'" src="./images/store_retro.png">
+        <span3>Retrô</span3>
+        <!-- Point-n-click -->
+        <img onclick="window.location.href='./store_category5.html'" src="./images/store_pointnclick.png">
+        <span3>Point-and-click</span3>
+        <!-- Puzzle -->
+        <img onclick="window.location.href='./store_category6.html'" src="./images/store_puzzle.png">
+        <span3>Puzzle</span3>
+      </div>
+    </div>
+    <div class="dropdown">
+      <img src="./images/send.png">
+      <div class="dropdown-content">
+        <span>Enviar um conteúdo</span>
+        <!-- Texto-->
+        <span3>Para poder enviar um joguinho, você pode entrar em nosso servidor do Discord e mandar para nós!</span3>
+        <img onclick="window.location.href='https://discord.gg/av4Hmew'" src="./images/discord.png">
+        <span3>Desculpamos por o processo ser assim, no futuro isso será muito melhor!</span3>
+      </div>
+    </div>
     <!-- Outros -->
 		<div class="time">
-			<span id="time">15:55</span>
+			<span id="time"></span>
 		</div>
 		<a href="index.html"><div class="battery">
 			<img src="./images/back.png">
 		</div></a>
 	</header>
 	<main id="main">
-		<div class="center">
-		<span2>Destaques - Survivor</span2><img src="./images/banner.png"><img onclick="location.href = './games/survivor.html';" src="./images/download.png"></div>
 	<div id="demo" class="games">
+      <!-- Survivor - Destaque -->
+      <a href="./games/survivor.html" class="banner">
+      <img src="./images/banner.png"></a>
+
 			<!-- Into the DIMENSIONS -->
 			<a href="./games/itd.html" class="item">
-				<img src="https://i.postimg.cc/3RPFf70w/itd-thumb.png"></a>
+				<img src="https://i.postimg.cc/g2rGYT87/thumb.png"></a>
 			<!-- Pixel BATTLE ARENA -->
 			<a href="./games/pba.html" class="item">
-				<img src="https://i.postimg.cc/y8SpsfdQ/pba.png"></a>
+				<img src="https://i.postimg.cc/L6Ds4P7J/thumb.png"></a>
 			<!-- Nothing to View Here -->
 			<a href="./games/nothing%20to%20view%20here.html" class="item">
 				<img src="https://i.postimg.cc/T3zT5mr6/thumb.png"></a>
 			<!-- A tale of a rooster  -->
 			<a href="./games/a%20tale%20of%20a%20coock.html" class="item">
-				<img src="https://cdn.discordapp.com/attachments/672974711617093712/700786423472586763/unknown.png"></a>
+				<img src="https://i.postimg.cc/dQmCdLpY/thumb.png"></a>
 			<!-- Pandemic Warfare -->
 			<a href="./games/pandemic%20warfare.html" class="item">
 				<img src="https://cdn.discordapp.com/attachments/689543022337458208/693947022457307166/1585520280575.png"></a>
@@ -82,14 +89,14 @@
 			<!-- FelipeNadhel's Mod -->
 			<a href="./games/felipenadhels%20mod.html" class="item">
 				<img src="https://i.postimg.cc/Wzs3HCyV/thumb.png"></a>
-		</div></main>
+		</div>
+  </main>
 	<footer class="flex">
 		<div class="mode">
 			<img src="./images/info.png">
 		</div>
 		<div class="accept flex v-center">
 			<img src="./images/controls.png">
-			<span>[&lt;] e [&gt;]=rolar pelos boxes</span>
 		</div>
 	</footer>
 </div>
